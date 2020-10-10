@@ -31,6 +31,7 @@ class _HomePageState extends State<HomePage> {
                 top: 0,
                 right: 0,
                 child: IconButton(
+                  tooltip: ThemeSwitcher.of(context).isDarkModeOn ? Constants.languages[selectedLang].lightMode : Constants.languages[selectedLang].darkMode,
                   icon: ThemeSwitcher.of(context).isDarkModeOn ? new Image.asset((Assets.sun), height: 25) : new Image.asset(Assets.moon, height: 25),
                   onPressed: () => ThemeSwitcher.of(context).switchDarkMode(),
                 )),
@@ -39,6 +40,7 @@ class _HomePageState extends State<HomePage> {
                 left: 0,
                 child: IconButton(
                   icon: Constants.languages[selectedLang].flag,
+                  tooltip: selectedLang == "tr" ? Constants.languages["en"].languageText : Constants.languages["tr"].languageText,
                   onPressed: () => setState(() {
                     selectedLang = selectedLang == "tr" ? "en" : "tr";
                   }),
