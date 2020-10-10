@@ -10,10 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  cupertino_icons: ^1.0.0
   flag: ^3.0.5
-dev_dependencies:
+  cupertino_icons: ^1.0.0
+
   flutter_test:
     sdk: flutter
 

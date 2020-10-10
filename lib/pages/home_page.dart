@@ -1,8 +1,8 @@
-import 'package:flag/flag.dart';
 import 'package:flutter/material.dart';
 import 'package:Wijt/config/assets.dart';
 import 'package:Wijt/config/constants.dart';
 import 'package:Wijt/widgets/theme_inherited_widget.dart';
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
 
 import 'package:flutter/services.dart';
