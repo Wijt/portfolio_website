@@ -1,8 +1,11 @@
+import 'package:flag/flag.dart';
 import 'package:flutter/material.dart';
 import 'package:Wijt/config/assets.dart';
 import 'package:Wijt/config/constants.dart';
 import 'package:Wijt/widgets/theme_inherited_widget.dart';
 import 'dart:html' as html;
+
+import 'package:flutter/services.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -12,8 +15,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  String selectedLang = "tr";
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setApplicationSwitcherDescription(ApplicationSwitcherDescription(
+      label: Constants.languages[selectedLang].title,
+      primaryColor: Theme.of(context).primaryColor.value,
+    ));
     return Scaffold(
         body: Stack(children: <Widget>[
       Container(
@@ -27,10 +35,19 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () => ThemeSwitcher.of(context).switchDarkMode(),
                 )),
             Positioned(
+                top: 0,
+                left: 0,
+                child: IconButton(
+                  icon: Constants.languages[selectedLang].flag,
+                  onPressed: () => setState(() {
+                    selectedLang = selectedLang == "tr" ? "en" : "tr";
+                  }),
+                )),
+            Positioned(
                 bottom: 0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text("💙 with flutter"),
+                  child: Text(Constants.languages[selectedLang].flutterText),
                 )),
           ],
         ),
@@ -56,7 +73,7 @@ class _HomePageState extends State<HomePage> {
                 height: 20,
               ),
               Text(
-                'Araştırmacı, geliştirici,\nyazılımcı.',
+                Constants.languages[selectedLang].caption,
                 style: Theme.of(context).textTheme.caption,
                 textScaleFactor: 2,
                 textAlign: TextAlign.center,
