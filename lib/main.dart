@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'config/themes.dart';
-import 'pages/main_page.dart';
+import 'pages/home_page.dart';
 import 'widgets/theme_inherited_widget.dart';
 
 void main() {
@@ -27,7 +27,7 @@ class WijtApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Hoş geldiniz",
       theme: ThemeSwitcher.of(context).isDarkModeOn ? darkTheme(context) : lightTheme(context),
-      home: MainPage(),
+      home: HomePage(),
     );
   }
 }
