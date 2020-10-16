@@ -22,7 +22,7 @@ class Constants {
     caption: "Learner, developer, \ncoder.",
     darkMode: "Change to dark mode",
     lightMode: "Change to light mode",
-    languageText: "Change to English",
+    languageText: "Convert to English",
     flutterText: "💙 with flutter...",
   );
   static Map<String, Language> languages = {"tr": tr, "en": en};
