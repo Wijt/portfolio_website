@@ -39,8 +39,8 @@ class _HomePageState extends State<HomePage> {
                 top: 0,
                 left: 0,
                 child: IconButton(
-                  icon: Constants.languages[selectedLang].flag,
-                  tooltip: selectedLang != "tr" ? Constants.languages["en"].languageText : Constants.languages["tr"].languageText,
+                  icon: Constants.languages[selectedLang == "tr" ? "en" : "tr"].flag,
+                  tooltip: selectedLang == "tr" ? Constants.languages["en"].languageText : Constants.languages["tr"].languageText,
                   onPressed: () => setState(() {
                     selectedLang = selectedLang == "tr" ? "en" : "tr";
                   }),
