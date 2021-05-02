@@ -1,4 +1,4 @@
-# Wijt
+# wijt
 
 A new Flutter project.
 

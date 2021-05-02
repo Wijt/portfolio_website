@@ -1,4 +1,4 @@
-name: Wijt
+name: wijt
 description: My personal website.
 
 publish_to: 'none'
@@ -10,11 +10,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flag: ^3.0.5
   cupertino_icons: ^1.0.0
-
   flutter_test:
     sdk: flutter
+  flutter_svg: ^0.21.0+1
 
 flutter:
   uses-material-design: true
@@ -22,6 +21,7 @@ flutter:
   - assets/
   - assets/fonts/
   - assets/social_media/
+  - assets/flag/
   
   fonts:
   - family: GoogleSansRegular

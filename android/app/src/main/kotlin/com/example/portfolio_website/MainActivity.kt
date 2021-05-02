@@ -1,4 +1,4 @@
-package com.example.Wijt
+package com.example.wijt
 
 import io.flutter.embedding.android.FlutterActivity
 

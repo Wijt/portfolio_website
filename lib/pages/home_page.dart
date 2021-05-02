@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:Wijt/config/assets.dart';
-import 'package:Wijt/config/constants.dart';
-import 'package:Wijt/widgets/theme_inherited_widget.dart';
+import 'package:wijt/config/assets.dart';
+import 'package:wijt/config/constants.dart';
+import 'package:wijt/widgets/theme_inherited_widget.dart';
+
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
 
@@ -96,14 +97,14 @@ class _HomePageState extends State<HomePage> {
                         splashColor: ThemeSwitcher.of(context).isDarkModeOn ? Colors.black : Colors.white,
                         icon: SizedBox(width: 20, height: 20, child: Image.asset(Assets.github)),
                         label: Text('Github'),
-                        onPressed: () => html.window.open(Constants.PROFILE_GITHUB, 'Wijt'),
+                        onPressed: () => html.window.open(Constants.PROFILE_GITHUB, 'wijt'),
                       ),
                       FlatButton.icon(
                         hoverColor: ThemeSwitcher.of(context).isDarkModeOn ? Colors.indigo[900] : Colors.black12,
                         splashColor: ThemeSwitcher.of(context).isDarkModeOn ? Colors.black : Colors.white,
                         icon: SizedBox(width: 20, height: 20, child: Image.asset(Assets.linkedin)),
                         label: Text('Linkedin'),
-                        onPressed: () => html.window.open(Constants.PROFILE_LINKEDIN, 'Wijt'),
+                        onPressed: () => html.window.open(Constants.PROFILE_LINKEDIN, 'wijt'),
                       ),
                     ],
                   ),
@@ -116,21 +117,21 @@ class _HomePageState extends State<HomePage> {
                         splashColor: ThemeSwitcher.of(context).isDarkModeOn ? Colors.black : Colors.white,
                         icon: SizedBox(width: 20, height: 20, child: Image.asset(Assets.twitter)),
                         label: Text('Twitter'),
-                        onPressed: () => html.window.open(Constants.PROFILE_TWITTER, 'Wijt'),
+                        onPressed: () => html.window.open(Constants.PROFILE_TWITTER, 'wijt'),
                       ),
                       FlatButton.icon(
                         hoverColor: ThemeSwitcher.of(context).isDarkModeOn ? Colors.indigo[900] : Colors.black12,
                         splashColor: ThemeSwitcher.of(context).isDarkModeOn ? Colors.black : Colors.white,
                         icon: SizedBox(width: 26, height: 26, child: Image.asset(Assets.instagram)),
                         label: Text('Instagram'),
-                        onPressed: () => html.window.open(Constants.PROFILE_INSTAGRAM, 'Wijt'),
+                        onPressed: () => html.window.open(Constants.PROFILE_INSTAGRAM, 'wijt'),
                       ),
                       FlatButton.icon(
                         hoverColor: ThemeSwitcher.of(context).isDarkModeOn ? Colors.indigo[900] : Colors.black12,
                         splashColor: ThemeSwitcher.of(context).isDarkModeOn ? Colors.black : Colors.white,
                         icon: SizedBox(width: 20, height: 20, child: Image.asset(Assets.facebook)),
                         label: Text('Facebook'),
-                        onPressed: () => html.window.open(Constants.PROFILE_FACEBOOK, 'Wijt'),
+                        onPressed: () => html.window.open(Constants.PROFILE_FACEBOOK, 'wijt'),
                       ),
                     ],
                   ),

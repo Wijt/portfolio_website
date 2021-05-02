@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Wijt.iml" filepath="$PROJECT_DIR$/Wijt.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/Wijt_android.iml" filepath="$PROJECT_DIR$/android/Wijt_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wijt.iml" filepath="$PROJECT_DIR$/wijt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/wijt_android.iml" filepath="$PROJECT_DIR$/android/wijt_android.iml" />
     </modules>
   </component>
 </project>

@@ -1,7 +1,7 @@
-import 'package:flag/flag.dart';
+import 'package:flutter/cupertino.dart';
 
 class Language {
-  Flag flag;
+  Widget flag;
   String title;
   String caption;
   String flutterText;
