@@ -17,12 +17,41 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   String selectedLang = "tr";
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setApplicationSwitcherDescription(ApplicationSwitcherDescription(
       label: Constants.languages[selectedLang].title,
       primaryColor: Theme.of(context).primaryColor.value,
     ));
+
+    final ButtonStyle flatButtonStyle = ButtonStyle(
+      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(5.0),
+        ),
+      ),
+      padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+        EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      ),
+      backgroundColor: MaterialStateProperty.resolveWith(
+        (Set<MaterialState> states) {
+          if (states.contains(MaterialState.hovered)) if (ThemeSwitcher.of(context).isDarkModeOn)
+            return Colors.indigo[900];
+          else
+            return Colors.black12;
+          return Colors.transparent;
+        },
+      ),
+      foregroundColor: MaterialStateProperty.all<Color>(ThemeSwitcher.of(context).isDarkModeOn ? Colors.white : Colors.black),
+      overlayColor: MaterialStateProperty.resolveWith<Color>(
+        (Set<MaterialState> states) {
+          if (states.contains(MaterialState.pressed)) return ThemeSwitcher.of(context).isDarkModeOn ? Colors.black : Colors.white;
+          return null;
+        },
+      ),
+    );
+
     return Scaffold(
       body: Stack(
         children: <Widget>[
@@ -92,16 +121,14 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      FlatButton.icon(
-                        hoverColor: ThemeSwitcher.of(context).isDarkModeOn ? Colors.indigo[900] : Colors.black12,
-                        splashColor: ThemeSwitcher.of(context).isDarkModeOn ? Colors.black : Colors.white,
+                      TextButton.icon(
+                        style: flatButtonStyle,
                         icon: SizedBox(width: 20, height: 20, child: Image.asset(Assets.github)),
                         label: Text('Github'),
                         onPressed: () => html.window.open(Constants.PROFILE_GITHUB, 'wijt'),
                       ),
-                      FlatButton.icon(
-                        hoverColor: ThemeSwitcher.of(context).isDarkModeOn ? Colors.indigo[900] : Colors.black12,
-                        splashColor: ThemeSwitcher.of(context).isDarkModeOn ? Colors.black : Colors.white,
+                      TextButton.icon(
+                        style: flatButtonStyle,
                         icon: SizedBox(width: 20, height: 20, child: Image.asset(Assets.linkedin)),
                         label: Text('Linkedin'),
                         onPressed: () => html.window.open(Constants.PROFILE_LINKEDIN, 'wijt'),
@@ -112,23 +139,20 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      FlatButton.icon(
-                        hoverColor: ThemeSwitcher.of(context).isDarkModeOn ? Colors.indigo[900] : Colors.black12,
-                        splashColor: ThemeSwitcher.of(context).isDarkModeOn ? Colors.black : Colors.white,
+                      TextButton.icon(
+                        style: flatButtonStyle,
                         icon: SizedBox(width: 20, height: 20, child: Image.asset(Assets.twitter)),
                         label: Text('Twitter'),
                         onPressed: () => html.window.open(Constants.PROFILE_TWITTER, 'wijt'),
                       ),
-                      FlatButton.icon(
-                        hoverColor: ThemeSwitcher.of(context).isDarkModeOn ? Colors.indigo[900] : Colors.black12,
-                        splashColor: ThemeSwitcher.of(context).isDarkModeOn ? Colors.black : Colors.white,
+                      TextButton.icon(
+                        style: flatButtonStyle,
                         icon: SizedBox(width: 26, height: 26, child: Image.asset(Assets.instagram)),
                         label: Text('Instagram'),
                         onPressed: () => html.window.open(Constants.PROFILE_INSTAGRAM, 'wijt'),
                       ),
-                      FlatButton.icon(
-                        hoverColor: ThemeSwitcher.of(context).isDarkModeOn ? Colors.indigo[900] : Colors.black12,
-                        splashColor: ThemeSwitcher.of(context).isDarkModeOn ? Colors.black : Colors.white,
+                      TextButton.icon(
+                        style: flatButtonStyle,
                         icon: SizedBox(width: 20, height: 20, child: Image.asset(Assets.facebook)),
                         label: Text('Facebook'),
                         onPressed: () => html.window.open(Constants.PROFILE_FACEBOOK, 'wijt'),
