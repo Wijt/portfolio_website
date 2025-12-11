@@ -96,7 +96,9 @@ class _HomePageState extends State<HomePage> {
                 children: <Widget>[
                   CircleAvatar(
                     radius: 100,
-                    backgroundImage: Image.asset(Assets.avatar).image,
+                    backgroundImage: NetworkImage(
+                      'https://avatars.githubusercontent.com/u/23127261?v=4',
+                    ),
                   ),
                   SizedBox(
                     height: 20,
