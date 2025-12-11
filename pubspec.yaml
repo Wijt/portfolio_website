@@ -21,7 +21,8 @@ flutter:
   - assets/
   - assets/fonts/
   - assets/social_media/
-  - assets/flag/
+  - assets/flag/tr.svg
+  - assets/flag/us.svg
   
   fonts:
   - family: GoogleSansRegular
