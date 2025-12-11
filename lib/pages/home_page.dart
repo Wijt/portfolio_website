@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:wijt/config/assets.dart';
 import 'package:wijt/config/constants.dart';
 import 'package:wijt/widgets/theme_inherited_widget.dart';
@@ -71,7 +72,10 @@ class _HomePageState extends State<HomePage> {
                   top: 0,
                   left: 0,
                   child: IconButton(
-                    icon: Constants.languages[selectedLang == "tr" ? "en" : "tr"].flag,
+                    icon: SvgPicture.asset(
+                      Constants.languages[selectedLang == "tr" ? "en" : "tr"].flag,
+                      height: 25,
+                    ),
                     tooltip: selectedLang == "tr" ? Constants.languages["en"].languageText : Constants.languages["tr"].languageText,
                     onPressed: () => setState(() {
                       selectedLang = selectedLang == "tr" ? "en" : "tr";

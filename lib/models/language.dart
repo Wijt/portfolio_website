@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 class Language {
-  Widget flag;
+  String flag;
   String title;
   String caption;
   String flutterText;

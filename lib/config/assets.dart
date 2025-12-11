@@ -7,4 +7,6 @@ class Assets {
   static const instagram = 'assets/social_media/instagram-2.png';
   static const linkedin = 'assets/social_media/linkedin.png';
   static const twitter = 'assets/social_media/twitter.png';
+  static const trFlag = 'assets/flag/tr.svg';
+  static const usFlag = 'assets/flag/us.svg';
 }

@@ -1,5 +1,5 @@
 import 'package:wijt/models/language.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:wijt/config/assets.dart';
 
 class Constants {
   static const PROFILE_LINKEDIN = 'https://www.linkedin.com/in/fkaya08/';
@@ -8,7 +8,7 @@ class Constants {
   static const PROFILE_TWITTER = 'https://twitter.com/iamfurkannn';
   static const PROFILE_INSTAGRAM = 'https://www.instagram.com/frkn.ky_/';
   static Language tr = Language(
-    flag: SvgPicture.asset("assets/flag/tr.svg"),
+    flag: Assets.trFlag,
     title: "Hoş geldiniz.",
     caption: "Araştırmacı, geliştirici, \nyazılımcı.",
     darkMode: "Karanlık moda geç",
@@ -17,7 +17,7 @@ class Constants {
     flutterText: "flutterla...",
   );
   static Language en = Language(
-    flag: SvgPicture.asset("assets/flag/us.svg"),
+    flag: Assets.usFlag,
     title: "Welcome.",
     caption: "Learner, developer, \ncoder.",
     darkMode: "Change to dark mode",
