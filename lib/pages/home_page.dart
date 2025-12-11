@@ -99,6 +99,30 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
+                Positioned(
+                  bottom: 0,
+                  right: 0,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        TextButton.icon(
+                          style: flatButtonStyle,
+                          icon: Icon(Icons.dashboard, size: 20),
+                          label: Text(Constants.languages[selectedLang].portfolio),
+                          onPressed: () => html.window.open(Constants.PORTFOLIO, 'wijt'),
+                        ),
+                        TextButton.icon(
+                          style: flatButtonStyle,
+                          icon: Icon(Icons.description, size: 20),
+                          label: Text(Constants.languages[selectedLang].resume),
+                          onPressed: () => html.window.open(Constants.RESUME, 'wijt'),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
@@ -174,6 +198,7 @@ class _HomePageState extends State<HomePage> {
                         onPressed: () => html.window.open(Constants.PROFILE_FACEBOOK, 'wijt'),
                       ),
                     ],
+                  ),
                   ),
                 ],
               ),

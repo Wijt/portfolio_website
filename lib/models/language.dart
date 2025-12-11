@@ -8,5 +8,7 @@ class Language {
   String darkMode;
   String lightMode;
   String languageText;
-  Language({this.flag, this.title, this.caption, this.flutterText, this.darkMode, this.lightMode, this.languageText});
+  String portfolio;
+  String resume;
+  Language({this.flag, this.title, this.caption, this.flutterText, this.darkMode, this.lightMode, this.languageText, this.portfolio, this.resume});
 }

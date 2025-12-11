@@ -7,6 +7,10 @@ class Constants {
   static const PROFILE_GITHUB = 'https://github.com/wijt';
   static const PROFILE_TWITTER = 'https://twitter.com/iamfurkannn';
   static const PROFILE_INSTAGRAM = 'https://www.instagram.com/frkn.ky_/';
+  
+  static const PORTFOLIO = 'https://portfolio.iamfurkan.com';
+  static const RESUME = 'https://iamfurkan.com/resume.pdf';
+
   static Language tr = Language(
     flag: Assets.trFlag,
     title: "Hoş geldiniz.",
@@ -15,6 +19,8 @@ class Constants {
     lightMode: "Aydınlık moda geç",
     languageText: "Türkçe'ye geç",
     flutterText: "flutterla...",
+    portfolio: "Portfolyo",
+    resume: "Özgeçmiş",
   );
   static Language en = Language(
     flag: Assets.usFlag,
@@ -24,6 +30,8 @@ class Constants {
     lightMode: "Change to light mode",
     languageText: "Switch to English",
     flutterText: "with flutter...",
+    portfolio: "Portfolio",
+    resume: "Resume",
   );
   static Map<String, Language> languages = {"tr": tr, "en": en};
 }
