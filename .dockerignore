@@ -1,0 +1,10 @@
+.git
+.idea
+.vscode
+build
+android
+ios
+test
+.gitignore
+*.iml
+.metadata
