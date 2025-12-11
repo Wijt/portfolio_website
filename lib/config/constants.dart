@@ -13,7 +13,7 @@ class Constants {
     caption: "Araştırmacı, geliştirici, \nyazılımcı.",
     darkMode: "Karanlık moda geç",
     lightMode: "Aydınlık moda geç",
-    languageText: "Switch to English",
+    languageText: "Türkçe'ye geç",
     flutterText: "flutterla...",
   );
   static Language en = Language(
@@ -22,7 +22,7 @@ class Constants {
     caption: "Learner, developer, \ncoder.",
     darkMode: "Change to dark mode",
     lightMode: "Change to light mode",
-    languageText: "Switch to Turkish",
+    languageText: "Switch to English",
     flutterText: "with flutter...",
   );
   static Map<String, Language> languages = {"tr": tr, "en": en};
