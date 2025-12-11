@@ -109,13 +109,13 @@ class _HomePageState extends State<HomePage> {
                       children: <Widget>[
                         TextButton.icon(
                           style: flatButtonStyle,
-                          icon: Icon(Icons.dashboard, size: 20),
+                          icon: Icon(Icons.dashboard, size: 20, color: Colors.blue),
                           label: Text(Constants.languages[selectedLang].portfolio),
                           onPressed: () => html.window.open(Constants.PORTFOLIO, 'wijt'),
                         ),
                         TextButton.icon(
                           style: flatButtonStyle,
-                          icon: Icon(Icons.description, size: 20),
+                          icon: Icon(Icons.description, size: 20, color: Colors.blue),
                           label: Text(Constants.languages[selectedLang].resume),
                           onPressed: () => html.window.open(Constants.RESUME, 'wijt'),
                         ),
