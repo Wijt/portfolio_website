@@ -82,7 +82,17 @@ class _HomePageState extends State<HomePage> {
                   bottom: 0,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text(Constants.languages[selectedLang].flutterText),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        Icon(
+                          Icons.favorite,
+                          color: Colors.blue,
+                        ),
+                        SizedBox(width: 5),
+                        Text(Constants.languages[selectedLang].flutterText),
+                      ],
+                    ),
                   ),
                 ),
               ],

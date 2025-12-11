@@ -8,22 +8,22 @@ class Constants {
   static const PROFILE_TWITTER = 'https://twitter.com/iamfurkannn';
   static const PROFILE_INSTAGRAM = 'https://www.instagram.com/iamfurkank_/';
   static Language tr = Language(
-    flag: SvgPicture.asset("flag/tr.svg"),
+    flag: SvgPicture.asset("assets/flag/tr.svg"),
     title: "Hoş geldiniz.",
     caption: "Araştırmacı, geliştirici, \nyazılımcı.",
     darkMode: "Karanlık moda geç",
     lightMode: "Aydınlık moda geç",
     languageText: "Türkçe'ye geç",
-    flutterText: "💙 flutterla...",
+    flutterText: "flutterla...",
   );
   static Language en = Language(
-    flag: SvgPicture.asset("flag/us.svg"),
+    flag: SvgPicture.asset("assets/flag/us.svg"),
     title: "Welcome.",
     caption: "Learner, developer, \ncoder.",
     darkMode: "Change to dark mode",
     lightMode: "Change to light mode",
     languageText: "Convert to English",
-    flutterText: "💙 with flutter...",
+    flutterText: "with flutter...",
   );
   static Map<String, Language> languages = {"tr": tr, "en": en};
 }
