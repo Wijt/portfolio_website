@@ -9,7 +9,7 @@ class Constants {
   static const PROFILE_INSTAGRAM = 'https://www.instagram.com/frkn.ky_/';
   
   static const PORTFOLIO = 'https://portfolio.iamfurkan.com';
-  static const RESUME = 'https://iamfurkan.com/resume.pdf';
+  static const RESUME = 'https://drive.google.com/file/d/1hkYvVQj5alU-susLio5ddOLtf_r3Za4z/view?usp=sharing';
 
   static Language tr = Language(
     flag: Assets.trFlag,
